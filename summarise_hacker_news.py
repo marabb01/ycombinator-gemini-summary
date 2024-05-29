@@ -15,7 +15,7 @@ def fetch_top_articles(feed_url, top_n=10):
 
 # Function to summarise multiple articles using Google Generative AI
 def summarise_articles(articles):
-    prompt = "Summarise the key points of the following articles and include the links in the response. Format the summary to be included in an email. Don't include any greetings:\n\n"
+    prompt = "Summarise the key points of the following articles and include the URLs in the response. Format the summary to be included in an email. Don't include any greetings:\n\n"
     for article in articles:
         prompt += f"Title: {article.title}\nLink: {article.link}\n\n"
     
